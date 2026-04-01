@@ -4,315 +4,257 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BitradeX Exchange</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Rajdhani:wght@300;500&display=swap" rel="stylesheet">
+
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height:1.6;
-    color:#ffffff;
-    background: linear-gradient(135deg,#000000 0%,#111111 100%);
-    min-height:100vh;
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-.container { max-width:1200px; margin:0 auto; padding:20px; }
+
+body {
+font-family: 'Rajdhani', sans-serif;
+background: radial-gradient(circle at top, #050505, #000);
+color: #e0f7ff;
+overflow-x: hidden;
+}
+
+/* FUNDO ANIMADO */
+body::before {
+content: "";
+position: fixed;
+width: 200%;
+height: 200%;
+background: linear-gradient(45deg, #00ecff22, #0066ff22, #00ecff22);
+animation: moveBg 15s linear infinite;
+z-index: -1;
+}
+
+@keyframes moveBg {
+0% { transform: translate(0,0); }
+50% { transform: translate(-25%, -25%); }
+100% { transform: translate(0,0); }
+}
+
+.container {
+max-width: 1200px;
+margin: auto;
+padding: 20px;
+}
+
+/* GLASS CARD */
+.glass {
+background: rgba(255,255,255,0.05);
+border: 1px solid rgba(0,236,255,0.2);
+backdrop-filter: blur(15px);
+border-radius: 20px;
+box-shadow: 0 0 40px rgba(0,236,255,0.15);
+padding: 30px;
+margin-bottom: 30px;
+}
 
 /* HEADER */
-.header {
-    text-align:center;
-    background: rgba(255,255,255,0.05);
-    border-radius:20px;
-    padding:40px 30px;
-    margin-bottom:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.1);
-    backdrop-filter: blur(10px);
-}
 .logo {
-    font-size:3rem;
-    margin-bottom:10px;
-    color:#00ecff;
-    font-weight:bold;
+font-family: 'Orbitron', sans-serif;
+font-size: 3rem;
+text-align: center;
+color: #00ecff;
+text-shadow: 0 0 20px #00ecff;
 }
-.subtitle { font-size:1.2rem; color:#66ccff; margin-bottom:20px; }
-/* texto principal do cabeçalho */
-.main-title {
-    font-size:2rem;
-    font-weight:bold;
-    color:white; /* texto branco */
-    margin-bottom:10px;
+
+.subtitle {
+text-align: center;
+margin-bottom: 20px;
+color: #aaa;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+color: #00ecff;
+text-shadow: 0 0 10px #00ecff55;
 }
 
 /* VIDEO */
-.video-container {
-    display:flex;
-    justify-content:center;
-    margin-bottom:20px;
-}
-.video-wrapper {
-    position:relative;
-    width:100%;
-    max-width:1000px;
-    padding-top:56.25%;
-    border-radius:20px;
-    overflow:hidden;
-}
-.video-wrapper iframe {
-    position:absolute;
-    top:0; left:0;
-    width:100%;
-    height:100%;
-    border:0;
+.video {
+position: relative;
+padding-top: 56.25%;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 0 30px #00ecff44;
+margin-bottom: 30px;
 }
 
-/* MAIN CONTENT */
-.main-content {
-    background: rgba(255,255,255,0.05);
-    border-radius:20px;
-    padding:40px;
-    margin-bottom:30px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.1);
-    backdrop-filter: blur(10px);
-    color:white;
-}
-.main-content p, .main-content li { color:white; }
-.section { margin-bottom:40px; }
-.section-title {
-    font-size:1.8rem;
-    color:#00ecff;
-    margin-bottom:20px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-.highlight-box {
-    background:#00ecff;
-    color:black;
-    padding:25px;
-    border-radius:15px;
-    margin:20px 0;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(102,126,234,0.3);
-}
-.price {
-    font-size:2.5rem;
-    font-weight:bold;
-    margin:10px 0;
-}
-.commission-grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-    margin:20px 0;
-}
-.commission-card {
-    background:#0d1117;
-    border:2px solid #667eea;
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color:white;
-}
-.commission-card:hover {
-    transform: translateY(-5px);
-    box-shadow:0 15px 35px rgba(102,126,234,0.2);
-}
-.commission-value { font-size:2rem; font-weight:bold; color:#667eea; margin:10px 0; }
-
-.phase-container {
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin:20px 0;
-}
-.phase-card {
-    background:#0d1117;
-    border-left:5px solid #667eea;
-    border-radius:10px;
-    padding:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    color:white;
-}
-.phase-title { font-weight:bold; color:#667eea; margin-bottom:10px; }
-.calculation {
-    background:#0d1117;
-    padding:15px;
-    border-radius:10px;
-    margin:10px 0;
-    border-left:4px solid #667eea;
-    color:white;
+.video iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
 }
 
-/* BUTTONS */
-.contact-section {
-    background: #00ecff;
-    color:black;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    margin-top:30px;
-}
-.contact-section a {
-    display:inline-block;
-    padding:15px 30px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:1.1rem;
-    margin:20px 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px #25D366, 0 0 20px #25D366, 0 0 30px #25D366 inset; /* neon verde */
-    color:white;
-    background:#25D366;
-}
-.contact-section a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px #25D366, 0 0 30px #25D366 inset, 0 0 40px #25D366;
+/* CARDS */
+.card {
+background: rgba(0,0,0,0.6);
+border: 1px solid #00ecff33;
+border-radius: 15px;
+padding: 20px;
+transition: 0.3s;
+margin-bottom: 20px;
 }
 
-/* FOOTER */
-.footer { text-align:center; color:white; margin-top:30px; padding:20px; }
-.conditions {
-    background:#0d1117;
-    border:1px solid #667eea;
-    border-radius:10px;
-    padding:20px;
-    margin:20px 0;
-    color:white;
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 0 20px #00ecff66;
 }
-.conditions h4 { color:#00ecff; margin-bottom:10px; }
-.conditions ul { list-style:none; padding-left:0; }
-.conditions li {
-    margin:8px 0;
-    padding-left:20px;
-    position:relative;
-}
-.conditions li:before { content:"⚠️"; position:absolute; left:0; }
 
-/* ANIMATIONS */
-.pulse { animation:pulse 2s infinite; }
-@keyframes pulse { 0% { transform:scale(1); } 50% { transform:scale(1.05); } 100% { transform:scale(1); } }
-.fade-in { animation:fadeIn 1s ease-in; }
-@keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
-
-@media(max-width:768px){
-    .container{padding:10px;}
-    .header,.main-content{padding:20px;}
-    .logo{font-size:2rem;}
-    .commission-grid{grid-template-columns:1fr;}
-    .phase-container{grid-template-columns:1fr;}
-    .contact-section a{display:block;margin:10px auto;}
+/* GRID */
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+gap: 20px;
 }
+
+/* BOTÕES */
+.btn {
+display: inline-block;
+padding: 15px 25px;
+border-radius: 50px;
+text-decoration: none;
+color: white;
+font-weight: bold;
+margin: 10px;
+transition: 0.3s;
+text-align:center;
+}
+
+.whatsapp {
+background: #00ecff;
+color: black;
+box-shadow: 0 0 15px #00ecff;
+}
+
+.whatsapp:hover {
+transform: scale(1.05);
+box-shadow: 0 0 25px #00ecff;
+}
+
+/* ANIMAÇÃO */
+.fade {
+animation: fade 1s ease-in;
+}
+
+@keyframes fade {
+from {opacity:0; transform:translateY(20px);}
+to {opacity:1; transform:translateY(0);}
+}
+
+strong {
+color: #ffffff;
+}
+
+a {
+color: #00ecff;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
 </style>
 </head>
+
 <body>
+
 <div class="container">
 
-<header class="header fade-in">
-    <div class="logo">BitradeX Exchange</div>
-    <div class="subtitle">Exchange de Negociação Cripto com IA Integrada</div>
-    <div class="main-title">
-        🚀 O mercado não espera — quem tem as melhores ferramentas sai na frente. A BitradeX oferece uma nova experiência em investimentos digitais, combinando tecnologia de ponta com automação inteligente para ajudar você a operar com mais eficiência.
-    </div>
-</header>
+<!-- HEADER -->
+<div class="glass fade">
+<div class="logo">BitradeX Exchange</div>
+<div class="subtitle">Exchange de Negociação Cripto com IA Integrada</div>
 
-<div class="video-container fade-in">
-    <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/R3HKucreOm4" allowfullscreen></iframe>
-    </div>
+<h1>
+🚀 <strong>O mercado não espera</strong> — e quem tem as melhores ferramentas, quem trabalha com <strong>Inteligência Artificial</strong> no mercado Cripto, sai na frente. A <strong>BitradeX Exchange</strong> chegou para oferecer uma nova experiência em investimentos digitais, combinando tecnologia de ponta com automação inteligente para ajudar você a operar com mais eficiência.
+</h1>
 </div>
 
-<main class="main-content fade-in">
-
-<section class="section">
-<h2 class="section-title">SEGURANÇA E TRANSPARÊNCIA:</h2>
-<p>A BitradeX está <strong>Ranqueada na posição 35</strong> na <strong>CertiK</strong>.</p>
-<p>A <strong>CertiK</strong> que auditou a BitradeX é líder em segurança blockchain, especializada em auditorias de contratos inteligentes (smart contracts) e monitoramento de riscos Web3, utilizando inteligência artificial. Principais características:</p>
-<p><strong>Auditoria de Contratos Inteligentes:</strong> Detecção de vulnerabilidades e bugs.</p>
-<p><strong>Skynet:</strong> Monitoramento on-chain 24/7.</p>
-<p><strong>KYC:</strong> Verificação de identidade das equipes.</p>
-<p>Certificadora CertiK: <a href="https://skynet.certik.com/exchanges/bitradex" target="_blank" style="color:#00ecff;">https://skynet.certik.com/exchanges/bitradex</a></p>
-
-<h1>A BitradeX é Ranqueada na CoinMarketCap!</h1>
-<p>» Posição (#81) <a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank" style="color:#00ecff;">coinmarketcap.com/rankings/exchanges</a></p>
-<p>» Posição (#52) <a href="https://coinmarketcap.com/rankings/exchanges/derivatives" target="_blank" style="color:#00ecff;">coinmarketcap.com/rankings/exchanges/derivatives</a></p>
-</section>
-
-<section class="section">
-<h2 class="section-title">Exemplo de Rentabilidade do Bot</h2>
-<div class="conditions">
-<h1>AI Daily (Flexível)</h1>
-<p><strong>•Aumento de rendimento progressivo semanal:</strong></p>
-<p>1ª Semana (0,10% ao dia)</p>
-<p>2ª Semana (0,13% ao dia)</p>
-<p>3ª Semana (0,16% ao dia)</p>
-<p>4ª Semana (0,19% ao dia)</p>
-<p>5ª Semana (0,22% ao dia)</p>
-<p>6ª Semana (0,25% ao dia)</p>
-<p><strong>•Sem período de bloqueio:</strong> fundos podem ser depositados e retirados a qualquer momento.</p>
-<p><strong>•Liquidação diária de rendimentos:</strong> ganhos calculados e distribuídos automaticamente a cada 24h.</p>
-<p><strong>•Estratégia de baixo risco:</strong> prioriza a segurança do capital.</p>
-<p><strong>•Perfil indicado:</strong> novos usuários ou quem busca liquidez.</p>
-
-<h1>AI 30–360</h1>
-<p><strong>•Múltiplos prazos de custódias disponíveis:</strong></p>
-<p>30 dias – Ganhos 0,30% ao dia = 9% ao mês</p>
-<p>90 dias – Ganhos 0,35% ao dia = 10,5% ao mês</p>
-<p>180 dias – Ganhos 0,40% ao dia = 12% ao mês</p>
-<p>360 dias – Ganhos 0,50% ao dia = 15% ao mês</p>
-<p><strong>•Taxa de retorno progressiva:</strong> maior período, maiores estratégias aplicadas pela IA.</p>
-<p><strong>•Reinvestimento inteligente:</strong> reinvestimento automático ao vencimento.</p>
-<p><strong>•Perfil indicado:</strong> investidores de médio e longo prazo.</p>
+<!-- VIDEO -->
+<div class="video glass">
+<iframe src="https://www.youtube.com/embed/R3HKucreOm4" allowfullscreen></iframe>
 </div>
-</section>
 
-<section class="section">
-<p>Nosso Robô utiliza Inteligência Artificial para abrir e fechar ordens no mercado cripto, de forma totalmente automatizada 📊🚀. Estamos buscando pessoas que procuram rendimento extra para crescer junto conosco!</p>
-</section>
+<!-- SEGURANÇA -->
+<div class="glass fade">
+<h2>SEGURANÇA E TRANSPARÊNCIA:</h2>
 
-<section class="section">
-<h2 class="section-title">Estrutura de Comissões</h2>
-<div class="highlight-box pulse">
-<div class="price">Comissões estruturadas em níveis (team levels) com lucros resgatáveis a qualquer momento.</div>
+<p>A <strong>BitradeX</strong> está Ranqueada na posição 35 na <strong>CertiK</strong>.</p>
+
+<p>A <strong>CertiK</strong> que auditou a BitradeX é uma empresa líder em segurança blockchain que garante total transparência e confiabilidade.</p>
+
+<h2>A BitradeX é Ranqueada na CoinMarketCap!</h2>
+
+<p>O que é o <strong>CoinMarketCap</strong>?</p>
+<p>A <strong>CoinMarketCap</strong> é o principal site de rastreamento de criptomoedas do mundo, fornecendo dados confiáveis para traders e investidores.</p>
 </div>
-<div class="commission-grid">
-<div class="commission-card">
-<h3>• Investidor direto:</h3>
-<p>Usuário que você indicou.</p>
-<p>• Ganho: 10% do AIBot dos afiliados diretos.</p>
+
+<!-- RENTABILIDADE -->
+<div class="glass fade">
+<h2>Exemplo de Rentabilidade do Bot</h2>
+
+<div class="card">
+<h3>AI Daily (Flexível)</h3>
+<p><strong>1ª Semana</strong> (0,10% ao dia)</p>
+<p><strong>2ª Semana</strong> (0,13% ao dia)</p>
+<p><strong>3ª Semana</strong> (0,16% ao dia)</p>
+<p><strong>4ª Semana</strong> (0,19% ao dia)</p>
+<p><strong>5ª Semana</strong> (0,22% ao dia)</p>
+<p><strong>6ª Semana</strong> (0,25% ao dia)</p>
 </div>
-<div class="commission-card">
-<h3>• Investidor indireto:</h3>
-<p>Usuário indicado pelo seu indicado.</p>
-<p>• Ganho: 5% do AIBot dos afiliados indiretos.</p>
+
+<div class="card">
+<h3>AI 30–360</h3>
+<p><strong>30 dias</strong> – Ganhos ao dia 0,30% = 9% ao mês</p>
+<p><strong>90 dias</strong> – Ganhos ao dia 0,35% = 10,5% ao mês</p>
+<p><strong>180 dias</strong> – Ganhos ao dia 0,40% = 12% ao mês</p>
+<p><strong>360 dias</strong> – Ganhos ao dia 0,50% = 15% ao mês</p>
 </div>
 </div>
-</section>
 
-</main>
+<!-- COMISSÕES -->
+<div class="glass fade">
+<h2>Estrutura de Comissões</h2>
+<div class="grid">
+<div class="card">
+<h3>Investidor indicado direto</h3>
+<p>10% do ganho de <strong>AIBot</strong></p>
+</div>
+<div class="card">
+<h3>Investidor indireto</h3>
+<p>5% do ganho</p>
+</div>
+</div>
+</div>
 
-<div class="contact-section fade-in">
+<!-- CONTATO -->
+<div class="glass fade" style="text-align:center;">
 <h2>Entre em Contato Agora!</h2>
-<a href="https://api.whatsapp.com/send/?phone=5521983123413" target="_blank">💬 Falar no WhatsApp</a>
-<a href="https://www.bitradex.ai/pt-br/account/register?inviteCode=KCGR6H" target="_blank">📱 Cadastre-se na Corretora</a>
-<a href="https://drive.google.com/file/d/1aFq4nZ85vKHPPKpIvm5_2JgU4wgcj0Cy" target="_blank">📋 Materiais de Divulgação</a>
+
+<a href="https://api.whatsapp.com/send/?phone=5521983123413" class="btn whatsapp">💬 Falar no WhatsApp</a>
+
+<a href="https://www.bitradex.ai/pt-br/account/register?inviteCode=KCGR6H" class="btn whatsapp">📱 Cadastre-se na Corretora</a>
 </div>
 
-<footer class="footer">
-<p>Participe já da BitradeX e construa sua renda passiva com robôs traders de alto impacto, controlados por IA.</p>
-<p>Além do robô, a corretora disponibiliza trading manual para quem deseja operar manualmente mercado SPOT/FUTUROS.</p>
-</footer>
-
+<!-- RODAPÉ -->
+<div class="glass fade">
+<h2>Sobre a BitradeX</h2>
+<p>Nosso carro-chefe são <strong>robôs traders de alto impacto</strong>, controlados por IA, e estamos buscando pessoas que procuram rendimento extra para crescer junto conosco.</p>
+<p>Além do robô, a corretora disponibiliza <strong>trading manual</strong> para quem deseja operar manualmente mercado SPOT/FUTUROS.</p>
+<p>Participe já dessa corretora inovadora que oferece soluções de <strong>inteligência artificial</strong>. Não perca esta oportunidade de começar construir sua renda passiva agora mesmo!</p>
 </div>
 
-<script>
-window.addEventListener('scroll', function(){
-    document.querySelectorAll('.section').forEach(element=>{
-        const top = element.getBoundingClientRect().top;
-        if(top < window.innerHeight - 150){
-            element.classList.add('fade-in');
-        }
-    });
-});
-</script>
-
+</div>
 </body>
 </html>
