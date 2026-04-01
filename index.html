@@ -9,8 +9,7 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #000;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
 }
 
 .container {
@@ -31,22 +30,18 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-h1 {
-    font-size: 1.8rem;
-}
-
 h2 {
-    font-size: 1.5rem;
     border-left: 5px solid #00ecff;
     padding-left: 10px;
 }
 
 p {
     margin-bottom: 12px;
+    line-height: 1.6;
 }
 
 strong {
-    color: #000;
+    font-weight: bold;
 }
 
 .highlight {
@@ -58,8 +53,6 @@ strong {
 }
 
 .link {
-    display: inline-block;
-    margin-top: 10px;
     color: #1e88e5;
     font-weight: bold;
     text-decoration: none;
@@ -78,6 +71,12 @@ strong {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+.box {
+    background: #f5f7ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .button {
     display: inline-block;
     padding: 12px 25px;
@@ -88,21 +87,11 @@ strong {
     margin: 10px 5px;
 }
 
-.whatsapp {
-    background: #25D366;
-}
+.whatsapp { background: #25D366; }
+.primary { background: #1e88e5; }
+.danger { background: #ff6b6b; }
 
-.primary {
-    background: #1e88e5;
-}
-
-.danger {
-    background: #ff6b6b;
-}
-
-.center {
-    text-align: center;
-}
+.center { text-align: center; }
 
 iframe {
     width: 100%;
@@ -119,9 +108,15 @@ iframe {
 <div class="card center">
     <h1>🚀 Bitradex Exchange</h1>
     <p><strong>Exchange de Negociação Cripto com IA Integrada</strong></p>
+
     <p>
-        O mercado não espera — quem utiliza <strong>Inteligência Artificial</strong> sai na frente.
-        A BitradeX combina tecnologia + automação para melhorar sua performance.
+    O mercado não espera — e quem tem as melhores ferramentas, quem trabalha com 
+    <strong>Inteligência Artificial</strong> no mercado Cripto, sai na frente.
+    </p>
+
+    <p>
+    A BitradeX Exchange chegou para oferecer uma nova experiência em investimentos digitais, 
+    combinando tecnologia de ponta com automação inteligente para ajudar você a operar com mais eficiência.
     </p>
 </div>
 
@@ -130,87 +125,116 @@ iframe {
 </div>
 
 <div class="card">
-    <h2>🔒 Segurança e Transparência</h2>
+    <h2>🔒 SEGURANÇA E TRANSPARÊNCIA</h2>
 
-    <p><strong>Ranking:</strong> Top 35 na CertiK</p>
+    <p><strong>A BitradeX está Ranqueada:</strong> na posição 35 na CertiK.</p>
 
-    <p><strong>CertiK:</strong> Empresa líder em segurança blockchain.</p>
+    <p><strong>A CertiK que auditou a BitradeX:</strong> é uma empresa líder em segurança blockchain, especializada em auditorias de contratos inteligentes (smart contracts) e monitoramento de riscos Web3, utilizando inteligência artificial.</p>
 
-    <p><strong>Auditoria:</strong> Detecta vulnerabilidades em contratos inteligentes.</p>
+    <p><strong>Auditoria de Contratos Inteligentes:</strong> A CertiK realiza auditorias minuciosas nos códigos de projetos para detectar vulnerabilidades, bugs e potenciais riscos de manipulação.</p>
 
-    <p><strong>Skynet:</strong> Monitoramento 24h em tempo real.</p>
+    <p><strong>Skynet:</strong> Sistema de monitoramento de segurança on-chain 24/7.</p>
 
-    <p><strong>KYC:</strong> Verificação de identidade para evitar fraudes.</p>
+    <p><strong>KYC (Know Your Customer):</strong> Verificação de identidade para reduzir riscos de fraudes.</p>
 
+    <p><strong>Por que a CertiK é importante:</strong> Com o aumento de hacks no setor DeFi, tornou-se um padrão da indústria.</p>
+
+    <p>
+    <strong>Certificadora de Segurança CertiK:</strong> 
     <a class="link" href="https://skynet.certik.com/exchanges/bitradex" target="_blank">
-        🔗 Ver auditoria na CertiK
+    Acessar auditoria
     </a>
+    </p>
 
-    <br><br>
+    <h3>A BitradeX é Ranqueada na CoinMarketCap</h3>
 
-    <p><strong>CoinMarketCap:</strong> Plataforma global de dados cripto</p>
+    <p><strong>CoinMarketCap:</strong> principal site de rastreamento de criptomoedas.</p>
 
-    <p><strong>Ranking:</strong> #81 (Spot) | #52 (Derivativos)</p>
+    <p>
+    <strong>Posição (#81):</strong> 
+    <a class="link" href="https://coinmarketcap.com/rankings/exchanges/" target="_blank">Ver ranking</a>
+    </p>
 
-    <a class="link" href="https://coinmarketcap.com/rankings/exchanges/" target="_blank">
-        🔗 Ver ranking
-    </a>
+    <p>
+    <strong>Posição (#52):</strong> 
+    <a class="link" href="https://coinmarketcap.com/rankings/exchanges/derivatives" target="_blank">Ver derivativos</a>
+    </p>
 </div>
 
 <div class="card">
-    <h2>📊 Rentabilidade dos Bots</h2>
+    <h2>📊 Exemplo de Rentabilidade do Bot</h2>
 
-    <p><strong>AI Daily (Flexível):</strong></p>
-    <p>Semana 1: 0,10% ao dia</p>
-    <p>Semana 2: 0,13% ao dia</p>
-    <p>Semana 3: 0,16% ao dia</p>
-    <p>Semana 4: 0,19% ao dia</p>
-    <p>Semana 5: 0,22% ao dia</p>
-    <p>Semana 6: 0,25% ao dia</p>
+    <div class="box">
+        <p><strong>AI Daily (Flexível):</strong></p>
 
-    <p><strong>Diferenciais:</strong></p>
-    <p>• Sem bloqueio</p>
-    <p>• Saque a qualquer momento</p>
-    <p>• Rendimentos diários</p>
+        <p>1ª Semana: 0,10% ao dia</p>
+        <p>2ª Semana: 0,13% ao dia</p>
+        <p>3ª Semana: 0,16% ao dia</p>
+        <p>4ª Semana: 0,19% ao dia</p>
+        <p>5ª Semana: 0,22% ao dia</p>
+        <p>6ª Semana: 0,25% ao dia</p>
+
+        <br>
+
+        <p><strong>Sem período de bloqueio:</strong> saque a qualquer momento</p>
+        <p><strong>Liquidação diária:</strong> rendimentos automáticos</p>
+        <p><strong>Estratégia de baixo risco:</strong> foco em segurança</p>
+    </div>
 
     <br>
 
-    <p><strong>AI 30–360:</strong></p>
-    <p>30 dias: 0,30% ao dia</p>
-    <p>90 dias: 0,35% ao dia</p>
-    <p>180 dias: 0,40% ao dia</p>
-    <p>360 dias: 0,50% ao dia</p>
+    <div class="box">
+        <p><strong>AI 30–360:</strong></p>
+
+        <p>30 dias – 0,30% ao dia</p>
+        <p>90 dias – 0,35% ao dia</p>
+        <p>180 dias – 0,40% ao dia</p>
+        <p>360 dias – 0,50% ao dia</p>
+
+        <br>
+
+        <p><strong>Reinvestimento inteligente:</strong> juros compostos</p>
+        <p><strong>Perfil:</strong> médio e longo prazo</p>
+    </div>
 </div>
 
 <div class="card">
-    <h2>💰 Sistema de Comissão</h2>
+    <h2>💰 Estrutura de Comissões</h2>
 
     <div class="highlight">
-        Ganhos com juros compostos + saque a qualquer momento
-    </div>
-
-    <div class="grid grid-2">
-        <div>
-            <p><strong>Indicação Direta:</strong></p>
-            <p>10% sobre ganhos do indicado</p>
-        </div>
-
-        <div>
-            <p><strong>Indicação Indireta:</strong></p>
-            <p>5% sobre ganhos da rede</p>
-        </div>
+        Comissões estruturadas em níveis + juros compostos de 0,2% com saque a qualquer momento
     </div>
 </div>
 
+<div class="card">
+    <h2>👥 Sistema de Afiliados</h2>
+
+    <div class="grid grid-2">
+        <div class="box">
+            <p><strong>Investidor direto:</strong></p>
+            <p>10% do ganho dos afiliados diretos</p>
+        </div>
+
+        <div class="box">
+            <p><strong>Investidor indireto:</strong></p>
+            <p>5% do ganho da rede</p>
+        </div>
+    </div>
+
+    <p>
+    Não é a Exchange sozinha que gera sucesso — é a combinação de tecnologia + gestão de risco + comportamento do investidor.
+    </p>
+</div>
+
 <div class="card center">
-    <h2>📲 Comece Agora</h2>
+    <h2>📲 Entre em Contato</h2>
 
     <a href="https://api.whatsapp.com/send/?phone=5521983123413" target="_blank" class="button whatsapp">
         WhatsApp
     </a>
 
     <a href="https://www.bitradex.ai/pt-br/account/register?inviteCode=KCGR6H" target="_blank" class="button primary">
-        Criar Conta
+        Cadastrar-se
     </a>
 
     <a href="https://drive.google.com/file/d/1aFq4nZ85vKHPPKpIvm5_2JgU4wgcj0Cy" target="_blank" class="button danger">
