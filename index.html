@@ -67,22 +67,31 @@ body::before {
 .subtitle {
   text-align: center;
   margin-bottom: 20px;
-  color: #fff;
-  font-weight: bold;
+  color: #aaa;
 }
 
 /* TITULOS */
 h1, h2, h3 {
-  color: #fff;
+  color: #00ecff;
   text-shadow: 0 0 10px #00ecff55;
 }
 
 /* VIDEO */
-.main-content iframe {
-  width: 100%;
-  height: 600px;
+.video {
+  position: relative;
+  padding-top: 56.25%;
   border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0 0 30px #00ecff44;
+  margin-bottom: 20px;
+}
+
+.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /* CARDS */
@@ -101,14 +110,14 @@ h1, h2, h3 {
 }
 
 /* GRID */
-.commission-grid {
+.grid, .commission-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 20px;
 }
 
 /* BOTÕES */
-.button {
+.btn {
   display: inline-block;
   padding: 15px 25px;
   border-radius: 50px;
@@ -117,31 +126,30 @@ h1, h2, h3 {
   font-weight: bold;
   margin: 10px;
   transition: 0.3s;
-  box-shadow: 0 0 15px #00ecff;
 }
 
-.button.whatsapp {
+.whatsapp {
   background: #00ff55;
   color: black;
   box-shadow: 0 0 15px #00ff55;
 }
 
-.button.whatsapp:hover {
+.whatsapp:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px #00ff55;
 }
 
-.button.blue {
+.blue {
   background: #0066ff;
   box-shadow: 0 0 15px #0066ff;
 }
 
-.button.red {
+.red {
   background: #ff4444;
   box-shadow: 0 0 15px #ff4444;
 }
 
-.button:hover {
+.btn:hover {
   transform: scale(1.05);
 }
 
@@ -183,113 +191,118 @@ a.link:hover {
   </h1>
 </div>
 
-<div class="main-content glass fade">
+<div class="video glass fade">
   <iframe src="https://www.youtube.com/embed/R3HKucreOm4" allowfullscreen></iframe>
 </div>
 
-<div class="glass fade main-content">
-  <h2>SEGURANÇA E TRANSPARÊNCIA:</h2>
+<div class="glass fade">
+<h2>SEGURANÇA E TRANSPARÊNCIA:</h2>
 
-  <p><strong>A BitradeX está Ranqueada na posição #35 na CertiK.</strong></p>
-  <p><strong>A CertiK que auditou a bitradex.</strong> É uma empresa líder em segurança blockchain, especializada em auditorias de contratos inteligentes (smart contracts) e monitoramento de riscos Web3, utilizando inteligência artificial.</p>
-  <p><strong>Auditoria de Contratos Inteligentes:</strong> A CertiK realiza auditorias minuciosas nos códigos de projetos para detectar vulnerabilidades, bugs e potenciais riscos de manipulação.</p>
-  <p><strong>Skynet:</strong> Um sistema de monitoramento de segurança on-chain 24/7 que avalia a postura de risco de contratos inteligentes em tempo real.</p>
-  <p><strong>KYC (Know Your Customer):</strong> A CertiK oferece serviços de verificação de identidade para equipes de projetos, aumentando a transparência e reduzindo o risco de "rug pulls".</p>
-  <p><strong>Por que a CertiK é importante:</strong> Com o aumento de hacks no setor DeFi, a auditoria da CertiK tornou-se um padrão da indústria, essencial para garantir a confiança de investidores.</p>
-  <p><strong>Certificadora de Segurança CertiK:</strong> 
-    <a href="https://skynet.certik.com/exchanges/bitradex" target="_blank" class="link">
-    https://skynet.certik.com/exchanges/bitradex
-    </a>
-  </p>
+<p><strong>A BitradeX está Ranqueada na posição #35 na CertiK.</strong></p>
+<p><strong>A CertiK que auditou a bitradex.</strong> É uma empresa líder em segurança blockchain, especializada em auditorias de contratos inteligentes (smart contracts) e monitoramento de riscos Web3, utilizando inteligência artificial.</p>
+<p><strong>Auditoria de Contratos Inteligentes:</strong> A CertiK realiza auditorias minuciosas nos códigos de projetos para detectar vulnerabilidades, bugs e potenciais riscos de manipulação.</p>
+<p><strong>Skynet:</strong> Um sistema de monitoramento de segurança on-chain 24/7 que avalia a postura de risco de contratos inteligentes em tempo real.</p>
+<p><strong>KYC (Know Your Customer):</strong> A CertiK oferece serviços de verificação de identidade para equipes de projetos, aumentando a transparência e reduzindo o risco de "rug pulls".</p>
+<p><strong>Por que a CertiK é importante:</strong> Com o aumento de hacks no setor DeFi, a auditoria da CertiK tornou-se um padrão da indústria, essencial para garantir a confiança de investidores.</p>
+<p><strong>Certificadora de Segurança CertiK:</strong> 
+  <a href="https://skynet.certik.com/exchanges/bitradex" target="_blank" class="link">
+  https://skynet.certik.com/exchanges/bitradex
+  </a>
+</p>
 
-  <h2>A BitradeX é Ranqueada na CoinMarketCap!</h2>
+<h2>A BitradeX é Ranqueada na CoinMarketCap!</h2>
 
-  <p><strong>O que é o CoinmarketCap:</strong> A CoinMarketCap é o principal site de rastreamento e análise de preços, volume e capitalização de mercado de criptomoedas no mundo.</p>
+<p><strong>O que é o CoinmarketCap:</strong> A CoinMarketCap é o principal site de rastreamento e análise de preços, volume e capitalização de mercado de criptomoedas no mundo.</p>
 
-  <p><strong>Posição (#81):</strong> 
-    <a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank" class="link">
-    https://coinmarketcap.com/rankings/exchanges/
-    </a>
-  </p>
+<p><strong>Posição (#81):</strong> 
+  <a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank" class="link">
+  https://coinmarketcap.com/rankings/exchanges/
+  </a>
+</p>
 
-  <p><strong>Posição (#52):</strong> 
-    <a href="https://coinmarketcap.com/rankings/exchanges/derivatives" target="_blank" class="link">
-    https://coinmarketcap.com/rankings/exchanges/derivatives
-    </a>
-  </p>
+<p><strong>Posição (#52):</strong> 
+  <a href="https://coinmarketcap.com/rankings/exchanges/derivatives" target="_blank" class="link">
+  https://coinmarketcap.com/rankings/exchanges/derivatives
+  </a>
+</p>
 </div>
 
-<div class="glass fade main-content">
-  <h2>Exemplo de Rentabilidade do Bot</h2>
+<div class="glass fade">
+<h2>Exemplo de Rentabilidade do Bot</h2>
 
-  <p><strong>A Exchange BitradeX atualmente oferece:</strong> dois tipos de produtos AI Bot (robôs de Inteligência Artificial).</p>
+<p><strong>A Exchange BitradeX atualmente oferece:</strong> dois tipos de produtos AI Bot (robôs de Inteligência Artificial).</p>
 
-  <h3>AIBot Daily (Flexível)</h3>
-  <p>Aumento de rendimento progressivo semanal.</p>
-  <p>1ª Semana (0,10% ao dia)</p>
-  <p>2ª Semana (0,13% ao dia)</p>
-  <p>3ª Semana (0,16% ao dia)</p>
-  <p>4ª Semana (0,19% ao dia)</p>
-  <p>5ª Semana (0,22% ao dia)</p>
-  <p>6ª Semana (0,25% ao dia)</p>
-  <p><strong>Sem período de bloqueio:</strong> os fundos podem ser depositados e retirados a qualquer momento.</p>
-  <p><strong>Liquidação diária de rendimentos:</strong> ganhos a cada 24 horas.</p>
-  <p><strong>Estratégia de baixo risco:</strong> prioriza segurança do capital.</p>
+<h3>AIBot Daily (Flexível)</h3>
+<p>Aumento de rendimento progressivo semanal.</p>
+<p>1ª Semana (0,10% ao dia)</p>
+<p>2ª Semana (0,13% ao dia)</p>
+<p>3ª Semana (0,16% ao dia)</p>
+<p>4ª Semana (0,19% ao dia)</p>
+<p>5ª Semana (0,22% ao dia)</p>
+<p>6ª Semana (0,25% ao dia)</p>
+<p><strong>Sem período de bloqueio:</strong> os fundos podem ser depositados e retirados a qualquer momento.</p>
+<p><strong>Liquidação diária de rendimentos:</strong> ganhos a cada 24 horas.</p>
+<p><strong>Estratégia de baixo risco:</strong> prioriza segurança do capital.</p>
 
-  <h3>AIBot 30–360</h3>
-  <p>30 dias – Ganhos ao dia 0,30% = 9% ao mês.</p>
-  <p>90 dias – Ganhos ao dia 0,35% = 10,5% ao mês.</p>
-  <p>180 dias – Ganhos ao dia 0,40% = 12% ao mês.</p>
-  <p>360 dias – Ganhos ao dia 0,50% = 15% ao mês.</p>
-  <p><strong>Taxa de retorno progressiva:</strong> quanto maior o período, maior o retorno esperado.</p>
-  <p><strong>Reinvestimento inteligente:</strong> crescimento com juros compostos.</p>
-  <p><strong>Perfil indicado:</strong> investidores de médio e longo prazo.</p>
+<h3>AIBot 30–360</h3>
+<p>30 dias – Ganhos ao dia 0,30% = 9% ao mês.</p>
+<p>90 dias – Ganhos ao dia 0,35% = 10,5% ao mês.</p>
+<p>180 dias – Ganhos ao dia 0,40% = 12% ao mês.</p>
+<p>360 dias – Ganhos ao dia 0,50% = 15% ao mês.</p>
+<p><strong>Taxa de retorno progressiva:</strong> quanto maior o período, maior o retorno esperado.</p>
+<p><strong>Reinvestimento inteligente:</strong> crescimento com juros compostos.</p>
+<p><strong>Perfil indicado:</strong> investidores de médio e longo prazo.</p>
 </div>
 
-<div class="glass fade main-content">
-  <p>
-  Nosso Robô utiliza Inteligência Artificial para a abertura e fechamento de ordens no mercado cripto, 
-  nas principais corretoras do mercado, de forma totalmente automatizada 📊🚀
-  </p>
+<div class="glass fade">
+<p>
+Nosso Robô utiliza Inteligência Artificial para a abertura e fechamento de ordens no mercado cripto, 
+nas principais corretoras do mercado, de forma totalmente automatizada 📊🚀
+</p>
 
-  <p>
-  O carro-chefe da BitradeX são robôs traders de alto impacto, controlados por IA, 
-  e estamos buscando pessoas que procuram rendimento extra para crescer junto conosco!
-  </p>
+<p>
+O carro-chefe da BitradeX são robôs traders de alto impacto, controlados por IA, 
+e estamos buscando pessoas que procuram rendimento extra para crescer junto conosco!
+</p>
 </div>
 
-<div class="glass fade main-content">
-  <h2>Estrutura de Comissões</h2>
-  <div class="highlight-box">
-    Comissões estruturadas em níveis (team levels), que recompensa os usuários com base tanto no desempenho direto, quanto indireto.
+<div class="glass fade">
+<h2>Estrutura de Comissões</h2>
+<div class="highlight-box">
+Comissões estruturadas em níveis (team levels), que recompensa os usuários com base tanto no desempenho direto, quanto indireto.
+</div>
+</div>
+
+<div class="glass fade">
+<h2>Sistema de Afiliação de investidores</h2>
+
+<div class="commission-grid">
+  <div class="commission-card">
+    <p><strong>Investidor indicado direto:</strong> Afiliado que você convidou diretamente para se registrar na corretora.</p>
+    <p><strong>Ganho: </strong>10% do rendimento diário de cada afiliado direto.</p>
+  </div>
+
+  <div class="commission-card">
+    <p><strong>Investidor indicado indireto:</strong> Afiliado indicado por seu afiliado direto para se registrar na corretora.</p>
+    <p><strong>Ganho: </strong>5% do rendimento diário de cada afiliado indireto.</p>
   </div>
 </div>
 
-<div class="glass fade main-content">
-  <h2>Sistema de Afiliação de investidores</h2>
-
-  <div class="commission-grid">
-    <div class="commission-card">
-      <p><strong>Investidor indicado direto:</strong> Afiliado que você convidou diretamente para se registrar na corretora.</p>
-      <p><strong>Ganho: </strong>10% do rendimento diário de cada afiliado direto.</p>
-    </div>
-
-    <div class="commission-card">
-      <p><strong>Investidor indicado indireto:</strong> Afiliado indicado por seu afiliado direto para se registrar na corretora.</p>
-      <p><strong>Ganho: </strong>5% do rendimento diário de cada afiliado indireto.</p>
-    </div>
-  </div>
-
-  <p>
-  Não é a Exchange sozinha que gera sucesso — é a combinação de tecnologia + gestão de risco + comportamento do investidor.
-  </p>
+<p>
+Não é a Exchange sozinha que gera sucesso — é a combinação de tecnologia + gestão de risco + comportamento do investidor.
+</p>
 </div>
 
-<div class="glass fade contact-section" style="text-align:center;">
-  <h2>Entre em Contato Agora!</h2>
+<div class="glass fade" style="text-align:center;">
+<h2>Entre em Contato Agora!</h2>
 
-  <a href="https://api.whatsapp.com/send/?phone=5521983123413" target="_blank" class="button whatsapp">WhatsApp</a>
-  <a href="https://www.bitradex.ai/pt-br/account/register?inviteCode=KCGR6H" target="_blank" class="button blue">Cadastrar</a>
-  <a href="https://drive.google.com/file/d/1aFq4nZ85vKHPPKpIvm5_2JgU4wgcj0Cy" target="_blank" class="button red">Materiais</a>
+<a href="https://api.whatsapp.com/send/?phone=5521983123413" target="_blank" class="btn whatsapp">WhatsApp</a>
+<a href="https://www.bitradex.ai/pt-br/account/register?inviteCode=KCGR6H" target="_blank" class="btn blue">Cadastrar</a>
+<a href="https://drive.google.com/file/d/1aFq4nZ85vKHPPKpIvm5_2JgU4wgcj0Cy" target="_blank" class="btn red">Materiais</a>
 
-  <p>Não perca esta oportunidade de começar construi
+<p>Não perca esta oportunidade de começar construir sua renda passiva agora mesmo!</p>
+</div>
+
+</div>
+</body>
+</html>
