@@ -56,6 +56,33 @@ body::before {
   margin-bottom: 30px;
 }
 
+/* DIVISÓRIAS */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #00ecff, transparent);
+  margin: 25px 0;
+  opacity: 0.6;
+}
+
+.divider-glow {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ecff, #0066ff, #00ecff, transparent);
+  background-size: 200%;
+  animation: glowMove 3s linear infinite;
+  margin: 40px 0;
+}
+
+@keyframes glowMove {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+.item-divider {
+  border-bottom: 1px solid rgba(0,236,255,0.2);
+  margin: 10px 0;
+}
+
 /* HEADER */
 .logo {
   font-family: 'Orbitron', sans-serif;
@@ -72,14 +99,12 @@ body::before {
   color: #aaa;
 }
 
-/* TITULOS */
 h1, h2, h3 {
   color: #00ecff;
   text-shadow: 0 0 10px #00ecff55;
   margin-bottom: 15px;
 }
 
-/* PARÁGRAFOS */
 p {
   margin-bottom: 15px;
   line-height: 1.8;
@@ -204,10 +229,14 @@ a.link:hover {
   </p>
 </div>
 
+<div class="divider-glow"></div>
+
 <!-- VÍDEO -->
 <div class="video glass fade">
   <iframe src="https://www.youtube.com/embed/R3HKucreOm4" allowfullscreen></iframe>
 </div>
+
+<div class="divider-glow"></div>
 
 <!-- SEGURANÇA -->
 <div class="glass fade">
@@ -215,21 +244,35 @@ a.link:hover {
 
 <p><strong>A BitradeX está Ranqueada na posição #35 na CertiK.</strong></p>
 
+<div class="divider"></div>
+
 <p><strong>A CertiK que auditou a bitradex.</strong> É uma empresa líder em segurança blockchain, especializada em auditorias de contratos inteligentes (smart contracts) e monitoramento de riscos Web3, utilizando inteligência artificial.</p>
+
+<div class="divider"></div>
 
 <p><strong>Auditoria de Contratos Inteligentes:</strong> A CertiK realiza auditorias minuciosas nos códigos de projetos para detectar vulnerabilidades, bugs e potenciais riscos de manipulação.</p>
 
+<div class="divider"></div>
+
 <p><strong>Skynet:</strong> Um sistema de monitoramento de segurança on-chain 24/7 que avalia a postura de risco de contratos inteligentes em tempo real.</p>
+
+<div class="divider"></div>
 
 <p><strong>KYC (Know Your Customer):</strong> A CertiK oferece serviços de verificação de identidade para equipes de projetos, aumentando a transparência e reduzindo o risco de "rug pulls".</p>
 
+<div class="divider"></div>
+
 <p><strong>Por que a CertiK é importante:</strong> Com o aumento de hacks no setor DeFi, a auditoria da CertiK tornou-se um padrão da indústria, essencial para garantir a confiança de investidores.</p>
+
+<div class="divider"></div>
 
 <p><strong>Certificadora de Segurança CertiK:</strong> 
   <a href="https://skynet.certik.com/exchanges/bitradex" target="_blank" class="link">
   https://skynet.certik.com/exchanges/bitradex
   </a>
 </p>
+
+<div class="divider"></div>
 
 <h2>A BitradeX é Ranqueada na CoinMarketCap!</h2>
 
@@ -248,6 +291,8 @@ a.link:hover {
 </p>
 </div>
 
+<div class="divider-glow"></div>
+
 <!-- RENTABILIDADE -->
 <div class="glass fade">
 <h2>Exemplo de Rentabilidade do Bot</h2>
@@ -256,32 +301,50 @@ a.link:hover {
 
 <h3>AIBot Daily (Flexível)</h3>
 <p>Aumento de rendimento progressivo semanal.</p>
+
 <p>1ª Semana (0,10% ao dia)</p>
+<div class="item-divider"></div>
 <p>2ª Semana (0,13% ao dia)</p>
+<div class="item-divider"></div>
 <p>3ª Semana (0,16% ao dia)</p>
+<div class="item-divider"></div>
 <p>4ª Semana (0,19% ao dia)</p>
+<div class="item-divider"></div>
 <p>5ª Semana (0,22% ao dia)</p>
+<div class="item-divider"></div>
 <p>6ª Semana (0,25% ao dia)</p>
+
 <p><strong>Sem período de bloqueio:</strong> os fundos podem ser depositados e retirados a qualquer momento.</p>
 <p><strong>Liquidação diária de rendimentos:</strong> ganhos a cada 24 horas.</p>
 <p><strong>Estratégia de baixo risco:</strong> prioriza segurança do capital.</p>
 
 <h3>AIBot 30–360</h3>
+
 <p>30 dias – Ganhos ao dia 0,30% = 9% ao mês.</p>
+<div class="item-divider"></div>
 <p>90 dias – Ganhos ao dia 0,35% = 10,5% ao mês.</p>
+<div class="item-divider"></div>
 <p>180 dias – Ganhos ao dia 0,40% = 12% ao mês.</p>
+<div class="item-divider"></div>
 <p>360 dias – Ganhos ao dia 0,50% = 15% ao mês.</p>
+
 <p><strong>Taxa de retorno progressiva:</strong> quanto maior o período, maior o retorno esperado.</p>
 <p><strong>Reinvestimento inteligente:</strong> crescimento com juros compostos.</p>
 <p><strong>Perfil indicado:</strong> investidores de médio e longo prazo.</p>
 </div>
 
+<div class="divider-glow"></div>
+
 <!-- SOBRE O ROBÔ -->
 <div class="glass fade">
 <p>Nosso Robô utiliza Inteligência Artificial para a abertura e fechamento de ordens no mercado cripto, nas principais corretoras do mercado, de forma totalmente automatizada 📊🚀</p>
 
+<div class="divider"></div>
+
 <p>O carro-chefe da BitradeX são robôs traders de alto impacto, controlados por IA, e estamos buscando pessoas que procuram rendimento extra para crescer junto conosco!</p>
 </div>
+
+<div class="divider-glow"></div>
 
 <!-- COMISSÕES -->
 <div class="glass fade">
@@ -291,6 +354,8 @@ a.link:hover {
 </div>
 </div>
 
+<div class="divider"></div>
+
 <!-- AFILIAÇÃO -->
 <div class="glass fade">
 <h2>Sistema de Afiliação de investidores</h2>
@@ -298,17 +363,21 @@ a.link:hover {
 <div class="commission-grid">
   <div class="commission-card">
     <p><strong>Investidor indicado direto:</strong> Afiliado que você convidou diretamente para se registrar na corretora.</p>
+    <div class="divider"></div>
     <p><strong>Ganho: </strong>10% do rendimento diário de cada afiliado direto.</p>
   </div>
 
   <div class="commission-card">
     <p><strong>Investidor indicado indireto:</strong> Afiliado indicado por seu afiliado direto para se registrar na corretora.</p>
+    <div class="divider"></div>
     <p><strong>Ganho: </strong>5% do rendimento diário de cada afiliado indireto.</p>
   </div>
 </div>
 
 <p>Não é a Exchange sozinha que gera sucesso — é a combinação de tecnologia + gestão de risco + comportamento do investidor.</p>
 </div>
+
+<div class="divider-glow"></div>
 
 <!-- CONTATO -->
 <div class="glass fade" style="text-align:center;">
